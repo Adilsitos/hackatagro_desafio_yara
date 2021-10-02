@@ -1,13 +1,18 @@
 import styled from "styled-components";
+import img from '../../assets/header_background.png';
 
 export const Container = styled.div`
   margin: 0;
   padding: 0;
   font-family: "Boing Regular", sans-serif;
+  flex-direction: column;
   font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
   line-height: 35px;
   color: #ffffff;
-  background-color: #ffffff
+  background-color: white
 `;
 
 export const Content = styled.div`
@@ -26,15 +31,15 @@ export const Content = styled.div`
 
 export const Header = styled.header`
   padding: 25px 0px;
-  width: 100%;
+  width: 60%;
   background-color: #008000;
-  background-image: url(../../assets/header_background.png);
+  background-image: url(${img});
   margin-top:10px;
   display: inline-flex;
   justify-content:center;
   align-items: center;
   padding: 0;
-  height:100px;
+  height:300px;
 `;
 
 export const Menu = styled.nav`

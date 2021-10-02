@@ -11,10 +11,10 @@ function PainelControle(props) {
     <Container>
       <Header >
         <H1>
-          Fazenda das Flores
+        Fazenda das Flores
         </H1>
         <HiArrowDown size={15} style={{marginLeft:"5px"}}/>
-        
+
         <H1 style={{marginLeft: "550px"}}>
           Painel de Controle
         </H1>
@@ -28,7 +28,7 @@ function PainelControle(props) {
           Créditos
         </H1>
         <H1>
-          Perfil
+        Perfil
         </H1>
       </Header>
       <Body>
