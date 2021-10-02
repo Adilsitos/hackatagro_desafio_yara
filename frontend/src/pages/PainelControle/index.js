@@ -1,18 +1,21 @@
 import { Link, Menu } from "@material-ui/core";
+import {HiArrowDown} from "react-icons/hi";
 import React, { useState } from "react";
 import {
-  Container, Header, H1
+  Container, Header, H1, Title, Body
 } from "./styles";
 
 function PainelControle(props) {
 
   return (
     <Container>
-      <Header>
+      <Header >
         <H1>
           Fazenda das Flores
         </H1>
-        <H1 style={{marginLeft: "500px"}}>
+        <HiArrowDown size={15} style={{marginLeft:"5px"}}/>
+        
+        <H1 style={{marginLeft: "550px"}}>
           Painel de Controle
         </H1>
         <H1>
@@ -28,6 +31,12 @@ function PainelControle(props) {
           Perfil
         </H1>
       </Header>
+      <Body>
+        <Title>
+          Painel de Controle
+        </Title>
+      </Body>
+      
     </Container>
   );
 }

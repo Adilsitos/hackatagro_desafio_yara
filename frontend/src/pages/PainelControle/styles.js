@@ -4,7 +4,7 @@ export const Container = styled.div`
   margin: 0;
   padding: 0;
   font-family: "Boing Regular", sans-serif;
-  font-size: 35px;
+  font-size: 30px;
   line-height: 35px;
   color: #ffffff;
   background-color: #ffffff
@@ -28,8 +28,13 @@ export const Header = styled.header`
   padding: 25px 0px;
   width: 100%;
   background-color: #008000;
+  background-image: url(../../assets/header_background.png);
   margin-top:10px;
   display: inline-flex;
+  justify-content:center;
+  align-items: center;
+  padding: 0;
+  height:100px;
 `;
 
 export const Menu = styled.nav`
@@ -50,43 +55,28 @@ export const H1 = styled.h1`
   margin: 0;
   padding: 0;
   font-family: "Boing Regular", sans-serif;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 10px;
   color: #ffffff;
-  margin-left:20px;
+  margin-left:25px;
 `;
 
-export const Menulinks = styled.ul`
-  display: flex;
+export const Title = styled.ul`
+  margin-top:60px;
+  color:#000000;
+  font-family: "Boing Regular", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+
+`;
+
+export const Body = styled.div`
+  margin-top:0px;
+  padding:0px;
+  display:flex;
+  position: relative;
   align-items: center;
-  list-style: none;
-  font-size: 14px;
-  margin: 0;
-  padding: 0;
-  li {
-    margin-right: 35px;
-    cursor: pointer;
-    font-weight: 700;
-    color: #000;
-  }
-  li:hover {
-    color: #3cf;
-  }
-  &:last-child {
-    flex: 1;
-    justify-content: flex-end;
-  }
-
-  @media (max-width: 910px) {
-    display: none;
-  }
-`;
-
-export const Buttonoutline = styled.a`
-  text-decoration: none;
-  border-radius: 17px;
-  padding: 7px 18px;
-  border: 2px solid currentColor;
+  justify-content: center;
 `;
 
 export const Logo = styled.a`
