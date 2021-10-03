@@ -2,17 +2,15 @@ import styled from "styled-components";
 import img from '../../assets/header_background.png';
 
 export const Container = styled.div`
-  margin: 0;
-  padding: 0;
+
   font-family: "Boing Regular", sans-serif;
   flex-direction: column;
   font-size: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
-  line-height: 35px;
+ 
   color: #ffffff;
-  background-color: white
 `;
 
 export const Content = styled.div`
@@ -69,9 +67,12 @@ export const H1 = styled.h1`
 export const Title = styled.ul`
   margin-top:60px;
   color:#000000;
-  font-family: "Boing Regular", sans-serif;
+  font-family: "Comfortaa", sans-serif;
   font-size: 50px;
   font-weight: bold;
+  display: flex;
+  
+
 
 `;
 
@@ -82,7 +83,17 @@ export const Body = styled.div`
   position: relative;
   align-items: center;
   justify-content: center;
+  background-color: #D5E4D9;
+  width: 60%;
+  flex-direction: column;
 `;
+
+export const InputContainer = styled.div`
+  width: 60%;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+` ;
 
 export const Logo = styled.a`
   background-image: url("https://www.waze.com/webcms/static/compiled/eab8d17c745136dfb5b5c40fb8b2564a.svg");
