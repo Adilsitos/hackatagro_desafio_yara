@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 
 import {
-  Container, Header, H1, Title, Body, InputContainer, Background, HeaderTop
+  Container, Header, H1, Title, Body, HeaderContainer, ButtonLeft, InputContainer, Rodape
 } from "./styles";
 import { padding } from "@material-ui/system";
 
@@ -23,15 +23,14 @@ function Insumos(props) {
     return (
         <Container>
         
-            <Header >
-                <HeaderTop>
-
+        <HeaderContainer>
+            <Header>
                 <H1>
                 Fazenda das Flores
                 </H1>
                 <HiArrowDown size={15} style={{marginLeft:"5px", color:"#556B2F"}}/>
 
-                <H1 style={{marginLeft: "550px"}}>
+                <H1 style={{marginLeft: "400px"}}>
                 Painel de Controle
                 </H1>
                 <H1>
@@ -46,16 +45,19 @@ function Insumos(props) {
                 <H1>
                 Perfil
                 </H1>
-                </HeaderTop>
+            </Header>
 
-                <Title>
+            <Title>
                 Insumos
             </Title>
-            
+        </HeaderContainer>   
 
-            </Header>
             
         <Body>
+        <ButtonLeft>
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px"}} variant="outlined" >Colheita 01/10/2021 </Button>    
+        </ButtonLeft> 
+        
         <InputContainer>
             <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
             <InputLabel id="demo-simple-select-standard-label">Sementes</InputLabel>
@@ -65,12 +67,9 @@ function Insumos(props) {
                     value={semente}
                     label="Sementes"
                     onChange={(event)=> setSemente(event.target.value)}
-                    
-                
                 >
-                    <MenuItem value={10}>Insumo</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Soja</MenuItem>
+                    <MenuItem value={20}>Milho</MenuItem>
                 </Select>
             </FormControl>
             
@@ -88,9 +87,9 @@ function Insumos(props) {
                     onChange={(event)=> setFertilizante(event.target.value)}
                 
                 >
-                    <MenuItem value={10}>Insumo</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Fungicida</MenuItem>
+                    <MenuItem value={20}>Herbicida</MenuItem>
+                    
                 </Select>
             </FormControl>
             
@@ -107,9 +106,9 @@ function Insumos(props) {
                     onChange={(event)=> setDefensivo(event.target.value)}
                
                 >
-                    <MenuItem value={10}>Insumo</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Percevejo</MenuItem>
+                    <MenuItem value={20}>Lagarta</MenuItem>
+                 
                 </Select>
             </FormControl>
             
@@ -126,18 +125,21 @@ function Insumos(props) {
                     onChange={(event)=> setCorretivo(event.target.value)}
                     
                 >
-                    <MenuItem value={10}>Insumo</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Superbac 2 10 10</MenuItem>
+                    <MenuItem value={20}>Fertipar 10 15</MenuItem>
                 </Select>
             </FormControl>
             
             <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", borderRadius:"30px", color:"#d5e4d9", backgroundColor:"#1b4557"}} variant="contained" >Editar</Button>
         </InputContainer>
 
-        
-        
         </Body>
+
+        <Rodape>
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", backgroundColor:"#228B22"}} variant="contained" > Cadastro Fornecedores </Button>
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", backgroundColor:"#228B22"}} variant="contained" > Créditos acumulados </Button>    
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", backgroundColor:"#228B22"}} variant="contained" > Cronograma utilizado </Button>
+        </Rodape>        
         
     </Container>
   );

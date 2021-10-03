@@ -1,16 +1,15 @@
 import styled from "styled-components";
-import img from '../../assets/header_background.png';
+import img from '../../assets/image.png';
 
 export const Container = styled.div`
-
   font-family: "Boing Regular", sans-serif;
   flex-direction: column;
   font-size: 30px;
   justify-content: center;
   align-items: center;
   display: flex;
- 
-  color: #ffffff;
+  background-color:  #D5E4D9;
+  padding:0
 `;
 
 export const Content = styled.div`
@@ -19,7 +18,7 @@ export const Content = styled.div`
   grid-template-columns: 1.5fr 1fr;
   grid-template-rows: 1.4fr 1fr;
   margin: 0px 35px;
-  
+  background-color:  #D5E4D9;
   @media (max-width: 910px) {
     grid-gap: 25px;
     grid-template-columns: 1fr;
@@ -28,25 +27,27 @@ export const Content = styled.div`
   }
 `;
 
-export const HeaderTop = styled.div`
+export const HeaderContainer = styled.div`
   display: flex;
-  flex-direction: row;
-
+  flex-direction: column;
+  align-items: center;
+  width:60%;
+  height: 110%;
+  background-image: url(${img});
+  
+  margin-top: 0;
 `;
 
 export const Header = styled.header`
-  padding: 25px 0px;
-  width: 60%;
-  background-color: #008000;
-  background-image: url(${img});
+  width: 100%;
+ 
   margin-top:10px;
   display: inline-flex;
   justify-content:center;
   align-items: center;
-  
-  flex-direction: column;
+  flex-direction: row;
   padding: 0;
-  height:300px;
+  height:180px;
 `;
 
 export const Menu = styled.nav`
@@ -63,20 +64,37 @@ export const Menu = styled.nav`
   }
 `;
 
+export const Rodape = styled.div`
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+
+` 
+
+export const ButtonLeft = styled.div`
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+`
+
 export const H1 = styled.h1`
   margin: 0;
   padding: 0;
   font-family: "Boing Regular", sans-serif;
   font-size: 17px;
   line-height: 15px;
-  color:#556B2F	;
+  color:#f4f8f5	;
   margin-left:25px;
-  margin-right: 2px;
+
+  
 `;
 
 export const Title = styled.ul`
-  margin-top:60px;
-  color:#000000;
+  margin-top:2px;
+  color:#d5e4d9;
   font-family: "Comfortaa", sans-serif;
   font-size: 50px;
   font-weight: bold;
