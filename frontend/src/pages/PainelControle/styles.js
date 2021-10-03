@@ -12,7 +12,7 @@ export const Container = styled.div`
   display: flex;
   line-height: 35px;
   color: #ffffff;
-  background-color: white
+  background-color: white;
 `;
 
 export const Content = styled.div`
@@ -31,7 +31,7 @@ export const Content = styled.div`
 
 export const Header = styled.header`
   padding: 25px 0px;
-  width: 60%;
+  width: 0%;
   background-color: #008000;
   background-image: url(${img});
   margin-top:10px;

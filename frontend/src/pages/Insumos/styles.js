@@ -9,8 +9,9 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   display: flex;
+  width: 100%;
  
-  color: #ffffff;
+  background-color: #D5E4D9;
 `;
 
 export const Content = styled.div`
@@ -29,49 +30,35 @@ export const Content = styled.div`
 
 export const Header = styled.header`
   padding: 25px 0px;
-  width: 60%;
-  background-color: #008000;
-  background-image: url(${img});
+  width:100%;
   margin-top:10px;
   display: inline-flex;
   justify-content:center;
   align-items: center;
   padding: 0;
-  height:300px;
+  height:180px;
 `;
 
-export const Menu = styled.nav`
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: calc(100%-60px);
-  margin: 0 30px;
-  padding: 0;
-
-  @media (max-width: 910px) {
-    margin: 0 20px;
-  }
-`;
 
 export const H1 = styled.h1`
   margin: 0;
   padding: 0;
   font-family: "Boing Regular", sans-serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 10px;
   color: #ffffff;
-  margin-left:25px;
+  margin-left:20px;
+  color:#D5E4D9;
 `;
 
 export const Title = styled.ul`
-  margin-top:60px;
-  color:#000000;
+  margin-top:0px;
+  color:#D5E4D9;;
   font-family: "Comfortaa", sans-serif;
   font-size: 50px;
   font-weight: bold;
   display: flex;
-  
+  margin-left:400px;
 
 
 `;
@@ -84,7 +71,7 @@ export const Body = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #D5E4D9;
-  width: 60%;
+  width: 100%;
   flex-direction: column;
 `;
 
@@ -94,92 +81,15 @@ export const InputContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
 ` ;
-
-export const Logo = styled.a`
-  background-image: url("https://www.waze.com/webcms/static/compiled/eab8d17c745136dfb5b5c40fb8b2564a.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-right: 40px;
-  width: 36px;
-  height: 32px;
-`;
-
-export const MenuIconOpen = styled.div`
-  display: none;
-
-  @media (max-width: 910px) {
-    position: relative;
-    display: block;
-    width: 24px;
-    height: 12px;
-  }
-
-  ::after {
-    @media (max-width: 910px) {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #333665;
-    }
-  }
-
-  ::before {
-    @media (max-width: 910px) {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #333665;
-    }
-  }
-`;
-
-export const Card = styled.div`
+export const Background = styled.div`
+  background-image: url(${img});
+  filter:brightness(70%);
+  justify-content:center;
+  align-items: center;
+  width:95%;
   position: relative;
-  padding: 60px 55px 95px;
-  border-radius: 10px;
-  &:nth-child(1) {
-    @media (max-width: 910px) {
-      grid-column: 1 / 2;
-      grid-row: 1 / 2;
-    }
-
-    background: #35cbfc;
-    grid-column: 1 / 2;
-    grid-row: 1 / 2;
-  }
-  &:nth-child(2) {
-    @media (max-width: 910px) {
-      grid-column: 1 / 2;
-      grid-row: 2 / 3;
-    }
-
-    padding: 0;
-    border-radius: 0;
-    grid-column: 1 / 2;
-    grid-row: 2 / 3;
-  }
-  &:nth-child(3) {
-    @media (max-width: 910px) {
-      grid-column: 1 / 2;
-      grid-row: 3 / 4;
-    }
-
-    background: #69e693;
-    grid-column: 2 / 3;
-    grid-row: 1 / 3;
-  }
-
-  @media (max-width: 910px) {
-    position: relative;
-    padding: 40px 30px 75px;
-    border-radius: 10px;
-  }
+  display:table-cell;
+  
 `;
 
 export const Cardtitle = styled.div`
@@ -205,11 +115,11 @@ export const Carddescription = styled.p`
 `;
 
 export const Button = styled.button`
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 700;
   text-decoration: none;
   border: none;
-  border-radius: 26px;
+  border-radius: 20px;
   margin-right: 15px;
   padding: 15px 40px;
   cursor: pointer;
@@ -255,53 +165,4 @@ export const Hamburguermenu = styled.nav`
   padding: 20px;
   z-index: 2;
   background: #3cf;
-`;
-
-export const Hamburgermenuheader = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-`;
-
-export const Hamburgermenulink = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin-bottom: 40px;
-
-  & li a {
-    font-size: 28px;
-    font-weight: 700;
-    text-decoration: none;
-    color: inherit;
-    cursor: pointer;
-  }
-`;
-
-export const Menuiconclose = styled.div`
-  position: relative;
-  display: block;
-  width: 24px;
-  height: 12px;
-  cursor: pointer;
-  ::after {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: rotate(-45deg);
-    background-color: #fff;
-  }
-
-  ::before {
-    content: "";
-    position: absolute;
-    top: 5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    transform: rotate(45deg);
-    background-color: #fff;
-  }
 `;

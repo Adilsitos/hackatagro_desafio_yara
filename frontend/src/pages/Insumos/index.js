@@ -8,7 +8,7 @@ import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 
 import {
-  Container, Header, H1, Title, Body, InputContainer
+  Container, Header, H1, Title, Body, InputContainer, Background
 } from "./styles";
 import { padding } from "@material-ui/system";
 
@@ -23,20 +23,42 @@ function Insumos(props) {
 
     return (
         <Container>
-        <Header >
+        <Background>
+            <Header >
+                <H1>
+                Fazenda das Flores
+                </H1>
+                <HiArrowDown size={15} style={{marginLeft:"5px"}}/>
+
+                <H1 style={{marginLeft: "550px"}}>
+                Painel de Controle
+                </H1>
+                <H1>
+                Insumos
+                </H1>
+                <H1>
+                Custos
+                </H1>
+                <H1>
+                Créditos
+                </H1>
+                <H1>
+                Perfil
+                </H1>
+            </Header>
             <Title>
-            Insumos
+                Insumos
             </Title>
-        </Header>
+        </Background>
         <Body>
         <InputContainer>
             <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
-            <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-standard-label">Sementes</InputLabel>
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
                     value={age}
-                    label="Age"
+                    label="Sementes"
                     onChange={handleChange}
                 
                 >
@@ -46,17 +68,17 @@ function Insumos(props) {
                 </Select>
             </FormControl>
             
-            <Button style={{marginLeft:"20px"}} variant="contained" >Outlined</Button>
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", borderRadius:"30px", color:"#d5e4d9", backgroundColor:"#1b4557"}} variant="contained" >Editar</Button>
         </InputContainer>
 
         <InputContainer>
             <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
-            <InputLabel id="demo-simple-select-standard-label">Age</InputLabel>
+            <InputLabel id="demo-simple-select-standard-label">Fertilizantes</InputLabel>
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
                     value={age}
-                    label="Age"
+                    label="Fertilizantes"
                     onChange={handleChange}
                 
                 >
@@ -66,14 +88,52 @@ function Insumos(props) {
                 </Select>
             </FormControl>
             
-            <Button style={{marginLeft:"20px"}} variant="contained" >Outlined</Button>
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", borderRadius:"30px", color:"#d5e4d9", backgroundColor:"#1b4557"}} variant="contained" >Editar</Button>
+        </InputContainer>
+        <InputContainer>
+            <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
+            <InputLabel id="demo-simple-select-standard-label">Defensivos</InputLabel>
+                <Select
+                    labelId="demo-simple-select-standard-label"
+                    id="demo-simple-select-standard"
+                    value={age}
+                    label="Defensivos"
+                    onChange={handleChange}
+                
+                >
+                    <MenuItem value={10}>Insumo</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+            
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", borderRadius:"30px", color:"#d5e4d9", backgroundColor:"#1b4557"}} variant="contained" >Editar</Button>
+        </InputContainer>
+        <InputContainer>
+            <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
+            <InputLabel id="demo-simple-select-standard-label">Corretivos</InputLabel>
+                <Select
+                    labelId="demo-simple-select-standard-label"
+                    id="demo-simple-select-standard"
+                    value={age}
+                    label="Fertilizantes"
+                    onChange={handleChange}
+                
+                >
+                    <MenuItem value={10}>Insumo</MenuItem>
+                    <MenuItem value={20}>Twenty</MenuItem>
+                    <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+            </FormControl>
+            
+            <Button style={{marginLeft:"20px",height:"20px", marginTop:"30px", borderRadius:"30px", color:"#d5e4d9", backgroundColor:"#1b4557"}} variant="contained" >Editar</Button>
         </InputContainer>
 
         
         
         </Body>
         
-        </Container>
+    </Container>
   );
 }
 
