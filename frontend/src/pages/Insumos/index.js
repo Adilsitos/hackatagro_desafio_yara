@@ -8,27 +8,46 @@ import FormControl from '@mui/material/FormControl';
 import Button from '@mui/material/Button';
 
 import {
-  Container, Header, H1, Title, Body, InputContainer, Background
+  Container, Header, H1, Title, Body, InputContainer, Background, HeaderTop
 } from "./styles";
 import { padding } from "@material-ui/system";
 
 function Insumos(props) {
 
-    const [age, setAge] = React.useState('');
+    const [semente, setSemente] = React.useState('');
+    const [fertilizante, setFertilizante] = React.useState('');
+    const [defensivo, setDefensivo] = React.useState('');
+    const [corretivo, setCorretivo] = React.useState('');
+    const [option, setOption] = React.useState('');
 
-    const handleChange = (event) => {
-        setAge(event.target.value);
+    const handleChange= (event) => {
+        switch (option){
+            case 'semente':
+                setSemente(event.target.value);
+                break;
+            case 'fertilizante':
+                setFertilizante(event.target.value);
+                break;
+            case 'defensivo':
+                setDefensivo(event.target.value);
+            case 'corretivo':
+                setCorretivo(event.target.value); 
+
+        }
+        
     };
   
 
     return (
         <Container>
-        <Background>
+        
             <Header >
+                <HeaderTop>
+
                 <H1>
                 Fazenda das Flores
                 </H1>
-                <HiArrowDown size={15} style={{marginLeft:"5px"}}/>
+                <HiArrowDown size={15} style={{marginLeft:"5px", color:"#556B2F"}}/>
 
                 <H1 style={{marginLeft: "550px"}}>
                 Painel de Controle
@@ -45,11 +64,15 @@ function Insumos(props) {
                 <H1>
                 Perfil
                 </H1>
-            </Header>
-            <Title>
+                </HeaderTop>
+
+                <Title>
                 Insumos
             </Title>
-        </Background>
+            
+
+            </Header>
+            
         <Body>
         <InputContainer>
             <FormControl  variant="standard" sx={{ m: 1, minWidth: 500 }}>
@@ -57,9 +80,10 @@ function Insumos(props) {
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
-                    value={age}
+                    value={semente}
                     label="Sementes"
-                    onChange={handleChange}
+                    onChange={(event)=> setSemente(event.target.value)}
+                    
                 
                 >
                     <MenuItem value={10}>Insumo</MenuItem>
@@ -77,9 +101,9 @@ function Insumos(props) {
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
-                    value={age}
+                    value={fertilizante}
                     label="Fertilizantes"
-                    onChange={handleChange}
+                    onChange={(event)=> setFertilizante(event.target.value)}
                 
                 >
                     <MenuItem value={10}>Insumo</MenuItem>
@@ -96,10 +120,10 @@ function Insumos(props) {
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
-                    value={age}
+                    value={defensivo}
                     label="Defensivos"
-                    onChange={handleChange}
-                
+                    onChange={(event)=> setDefensivo(event.target.value)}
+               
                 >
                     <MenuItem value={10}>Insumo</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
@@ -115,10 +139,10 @@ function Insumos(props) {
                 <Select
                     labelId="demo-simple-select-standard-label"
                     id="demo-simple-select-standard"
-                    value={age}
+                    value={corretivo}
                     label="Fertilizantes"
-                    onChange={handleChange}
-                
+                    onChange={(event)=> setCorretivo(event.target.value)}
+                    
                 >
                     <MenuItem value={10}>Insumo</MenuItem>
                     <MenuItem value={20}>Twenty</MenuItem>
