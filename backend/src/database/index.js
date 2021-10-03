@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
 
-mongoose.connect(process.env.uri, {useMongoClient:true});
+mongoose.connect('mongodb://localhost/hackatagro', {useMongoClient:true});
 mongoose.Promise= global.Promise
 
 module.exports= mongoose;

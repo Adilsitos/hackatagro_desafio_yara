@@ -18,25 +18,7 @@ function Insumos(props) {
     const [fertilizante, setFertilizante] = React.useState('');
     const [defensivo, setDefensivo] = React.useState('');
     const [corretivo, setCorretivo] = React.useState('');
-    const [option, setOption] = React.useState('');
 
-    const handleChange= (event) => {
-        switch (option){
-            case 'semente':
-                setSemente(event.target.value);
-                break;
-            case 'fertilizante':
-                setFertilizante(event.target.value);
-                break;
-            case 'defensivo':
-                setDefensivo(event.target.value);
-            case 'corretivo':
-                setCorretivo(event.target.value); 
-
-        }
-        
-    };
-  
 
     return (
         <Container>
